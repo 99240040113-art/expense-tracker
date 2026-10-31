@@ -44,14 +44,19 @@ export default function Header({ onMenuClick }: HeaderProps) {
           >
             <Menu className="w-5 h-5" />
           </Button>
-          
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
+
+          <div className="flex items-center gap-2.5">
+            <div className="w-9 h-9 bg-primary-600 rounded-lg flex items-center justify-center shadow-sm">
               <Wallet className="w-5 h-5 text-white" />
             </div>
-            <span className="text-lg font-bold text-gray-900 dark:text-white hidden sm:block">
-              Expense Tracker
-            </span>
+            <div className="flex flex-col">
+              <span className="text-lg font-bold text-gray-900 dark:text-white leading-tight">
+                SpendFlow
+              </span>
+              <span className="text-[11px] font-medium text-gray-500 dark:text-gray-400 leading-none hidden sm:block">
+                Personal Finance Tracker
+              </span>
+            </div>
           </div>
         </div>
 

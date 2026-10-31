@@ -47,7 +47,7 @@ export function exportTransactionsToCSV(transactions: Transaction[]): void {
   
   // Generate filename with current date
   const today = new Date().toISOString().split('T')[0];
-  const filename = `expense-tracker-${today}.csv`;
+  const filename = `spendflow-${today}.csv`;
 
   link.setAttribute('href', url);
   link.setAttribute('download', filename);
@@ -88,7 +88,7 @@ export function exportSummaryToCSV(
   const url = URL.createObjectURL(blob);
   
   const today = new Date().toISOString().split('T')[0];
-  const filename = `expense-tracker-summary-${today}.csv`;
+  const filename = `spendflow-summary-${today}.csv`;
 
   link.setAttribute('href', url);
   link.setAttribute('download', filename);

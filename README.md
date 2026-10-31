@@ -1,4 +1,4 @@
-# 💰 Expense Tracker
+# 💰 SpendFlow – Personal Finance Tracker
 
 A modern, user-friendly income and expense tracking application. Track your finances, analyze spending patterns with beautiful charts, and take control of your budget.
 
@@ -217,7 +217,7 @@ const DEFAULT_EXPENSE_CATEGORIES: Category[] = [
 
 ### Change Currency Format
 
-The app ships with US Dollar (USD) formatting by default. Modify the currency formatter in utils to use a different currency:
+The app ships with Indian Rupee (INR - ₹) formatting by default. Modify the currency formatter in utils if you wish to use a different currency:
 
 ```typescript
 // src/utils/formatters.ts

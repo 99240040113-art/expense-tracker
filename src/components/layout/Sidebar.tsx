@@ -67,7 +67,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                     `flex items-center gap-3 px-4 py-3 rounded-lg transition-colors duration-200
                     ${
                       isActive
-                        ? 'bg-primary-50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400'
+                        ? 'bg-primary-50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400 font-semibold'
                         : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700'
                     }`
                   }
@@ -81,10 +81,15 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         </nav>
 
         {/* Footer info */}
-        <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-200 dark:border-gray-700">
-          <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
-            v1.0.0 - Expense Tracker
-          </p>
+        <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 space-y-2">
+          <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+            <span className="font-semibold text-gray-700 dark:text-gray-300">SpendFlow</span>
+            <span>v1.0.0</span>
+          </div>
+          <div className="inline-flex items-center justify-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-medium bg-primary-50 text-primary-700 dark:bg-primary-950/50 dark:text-primary-300 border border-primary-200/70 dark:border-primary-800/50 w-full">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary-500 animate-pulse" />
+            Built with CI/CD Automation
+          </div>
         </div>
       </aside>
     </>

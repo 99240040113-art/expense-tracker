@@ -75,7 +75,7 @@ export default function MonthlyBarChart({ data, title }: MonthlyBarChartProps) {
             tick={{ fill: '#6b7280', fontSize: 12 }}
             axisLine={{ stroke: '#d1d5db' }}
             tickLine={{ stroke: '#d1d5db' }}
-            tickFormatter={(value) => `₺${(value / 1000).toFixed(0)}k`}
+            tickFormatter={(value) => `₹${(value / 1000).toFixed(0)}k`}
           />
           <Tooltip content={<CustomTooltip />} />
           <Legend

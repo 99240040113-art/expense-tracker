@@ -2,12 +2,16 @@ import { format, parseISO, isValid } from 'date-fns';
 import { enUS } from 'date-fns/locale';
 
 /**
- * Format number as US Dollar currency
+ * Format number as Indian Rupee (INR) currency
  */
-export function formatCurrency(amount: number): string {
-  return new Intl.NumberFormat('en-US', {
+export function formatCurrency(
+  amount: number,
+  currency: string = 'INR',
+  locale: string = 'en-IN'
+): string {
+  return new Intl.NumberFormat(locale, {
     style: 'currency',
-    currency: 'USD',
+    currency,
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   }).format(amount);
@@ -54,10 +58,10 @@ export function getCurrentISOString(): string {
 }
 
 /**
- * Format number with thousand separators
+ * Format number with Indian thousand/lakh separators
  */
 export function formatNumber(num: number): string {
-  return new Intl.NumberFormat('en-US').format(num);
+  return new Intl.NumberFormat('en-IN').format(num);
 }
 
 /**
